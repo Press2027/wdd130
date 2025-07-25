@@ -1,0 +1,98 @@
+
+
+CSS Layout (rafting.css)
+🔹 Header with Grid and Flex
+css
+Copy
+Edit
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 1rem;
+  
+  background-color: #f0f0f0;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+🔹 History Section Layout (Grid or Flex)
+css
+Copy
+Edit
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.history img {
+  max-width: 100%;
+  height: auto;
+}
+🔹 Adventures Section with 5 Images (Flex or Grid)
+css
+Copy
+Edit
+.adventure-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.adventure-gallery figure {
+  flex: 1 1 calc(20% - 1rem);
+  text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+🔹 Footer with Right-Aligned Social Icons
+css
+Copy
+Edit
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+footer .social {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .social img {
+  width: 24px;
+  height: auto;
+}
