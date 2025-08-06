@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact White Water Rafting for questions about our trips, reservations, or website suggestions. Find our address, phone, and email.">
+    <meta name="author" content="Preston R.W Machanga">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - White Water Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Code injected by Five-server -->
+    <script async data-id="five-server" data-file="c:\Users\ChrisJoe\Documents\Home work\CSE111\wdd130\wwr\contact.html" type="application/javascript" src="/fiveserver.js"></script>
+</head>
+
+<body>
+<header>
+    <img src="image/logo.jpg" alt="Rafting Company Logo">
+    <h1>White Water Rafting</h1>
+    <nav class="button-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+    <section class="company-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong> 123 Rafting River Rd, Adventure City, RA 12345</p>
+        <p><strong>Phone:</strong> +254 724 074 619</p>
+        <p><strong>Email:</strong> info@whitewaterrafting.com</p>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.5228519782583!2d-111.95461974864147!3d40.29683109315357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d9e0324b8686d%3A0x2a3e0b230f8c8d8b!2sProvo%20River%20Parkway!5e0!3m2!1sen!2sus!4v1678822000000!5m2!1sen!2sus"
+                width="600" height="450" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section class="employee-profiles">
+        <h2>Our Team</h2>
+        <div class="employee-grid">
+            <figure>
+                <img src="image/employee1.webp" alt="Smiling employee John Doe">
+                <figcaption>John Doe - Lead Guide</figcaption>
+            </figure>
+            <figure>
+                <img src="image/employee2.jpeg" alt="Happy employee Jane Smith">
+                <figcaption>James Smith - Reservations Manager</figcaption>
+            </figure>
+            <figure>
+                <img src="image/employee3.webp" alt="Enthusiastic employee David Lee">
+                <figcaption>David Lee - Safety Coordinator</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="user_name">Name:</label>
+                <input type="text" id="user_name" name="user_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_email">Email:</label>
+                <input type="email" id="user_email" name="user_email" required>
+            </div>
+
+            <div class="form-group purpose-group">
+                <label>Purpose of Message:</label>
+                <div class="radio-options">
+                    <input type="radio" id="general_inquiry" name="message_purpose" value="general_inquiry" required>
+                    <label for="general_inquiry">General Inquiry</label><br>
+
+                    <input type="radio" id="reservation_question" name="message_purpose" value="reservation_question">
+                    <label for="reservation_question">Reservation Question</label><br>
+
+                    <input type="radio" id="website_suggestion" name="message_purpose" value="website_suggestion">
+                    <label for="website_suggestion">Website Suggestion</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="newsletter_subscribe" name="newsletter_subscribe">
+                <label for="newsletter_subscribe">Please subscribe me to the monthly newsletter</label>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Whitewater Rush Adventures | Preston R.W Machanga</p>
+    <div class="socialmedia">
+        <a href="https://facebook.com"><img src="image/fb.webp" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="image/1_Twitter.webp" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="image/instagram.webp" alt="Instagram"></a>
+        <!-- Replace the following link with actual wireframe image if available -->
+        <a href="image/contact-wireframe.png" target="_blank">Contact Us Wireframe</a>
+    </div>
+</footer>
+</body>
+</html>
