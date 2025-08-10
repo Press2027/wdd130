@@ -1,90 +1,108 @@
+/* ========== RECOMMENDED FONT IMPORTS ==========
+Add this to your HTML <head>:
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+=============================================== */
 
+/* ========== ROOT VARIABLES ========== */
+:root {
+  --primary-color: #0077cc;
+  --primary-dark: #005fa3;
+  --accent-color: #8c278f;
+  --bg-light: #f0f8ff;
+  --bg-white: #ffffff;
+  --bg-muted: #fafafa;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --border-color: #ddd;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --spacing: 2rem;
+}
 
-
-body {
-  font-family: 'Open Sans', sans-serif;
+/* ========== BASE STYLES ========== */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
   line-height: 1.6;
-  color: #333;
+  background-color: var(--bg-white);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-h1, h2 {
-  font-family: 'Montserrat', sans-serif;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--spacing);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-
+/* ========== HEADER ========== */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #8c278ffa;
-  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap;
+  padding: var(--spacing);
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border-bottom: 2px solid var(--border-color);
 }
 
 header img {
   width: 60px;
-  height: auto;
 }
 
 header h1 {
-  text-align: center;
-  margin: 0;
-}
-
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav li a {
-  font-weight: 600;
-  color: #edf2f3;
+  font-size: 1.8rem;
+  margin: 0 1rem;
 }
 
 .button-nav {
   display: flex;
-  margin-left: auto;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button-nav a {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #0077cc;
+  background-color: var(--primary-color);
   color: #fff;
-  text-align: center;
-  border: 1px solid #d6d8da;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
   font-weight: 600;
-  margin: 0;
-  border-right: none;
-}
-
-.button-nav a:last-child {
-  border-right: 1px solid #0077cc;
+  transition: background-color 0.3s ease;
 }
 
 .button-nav a:hover {
-  background-color: #005fa3;
+  background-color: var(--primary-dark);
 }
 
-
+/* ========== HERO SECTION ========== */
 .hero {
   position: relative;
   text-align: center;
@@ -94,17 +112,17 @@ nav li a {
 .hero img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .hero h1 {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
   border-radius: 5px;
+  font-size: 2.5rem;
 }
 
 .hero article {
@@ -112,11 +130,11 @@ nav li a {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   color: #000;
   padding: 1rem;
   border-radius: 8px;
-  max-width: 600px;
+  max-width: 700px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -128,8 +146,136 @@ nav li a {
   border-radius: 50%;
 }
 
+/* ========== HOME GRID SECTION ========== */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing);
+  padding: 3rem var(--spacing);
+  background-color: var(--bg-light);
+}
+
+.grid-item {
+  background: var(--bg-white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item img {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* ========== NEWSLETTER SECTION ========== */
+.newsletter {
+  padding: 3rem var(--spacing);
+  text-align: center;
+  background-color: var(--bg-muted);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.newsletter-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ========== CTA SECTION ========== */
+.cta {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e0f7fa;
+}
+
+.cta-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ========== TRIP DESCRIPTIONS ========== */
+.trip-descriptions {
+  display: grid;
+  gap: var(--spacing);
+  padding: var(--spacing);
+}
+
+
+
+
+
+
+.trip-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--bg-muted);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.trip-card img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* ========== TRIP TABLE ========== */
+.trip-table {
+  padding: var(--spacing);
+  overflow-x: auto;
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trip-table th,
+.trip-table td {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.trip-table th {
+  background-color: #f0f0f0;
+}
+
+/* ========== HISTORY SECTION ========== */
 .history {
-  padding: 3rem 2rem;
+  padding: 3rem var(--spacing);
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
@@ -143,7 +289,7 @@ nav li a {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 2rem;
+  gap: var(--spacing);
 }
 
 .history-grid p.left {
@@ -155,8 +301,6 @@ nav li a {
 .history-grid img {
   grid-column: 2;
   width: 160px;
-  height: auto;
-  justify-self: center;
 }
 
 .history-grid p.right {
@@ -165,9 +309,10 @@ nav li a {
   font-size: 1.1rem;
 }
 
+/* ========== ADVENTURE GALLERY ========== */
 .adventures {
-  padding: 3rem 2rem;
-  background: #f0f8ff;
+  padding: 3rem var(--spacing);
+  background: var(--bg-light);
 }
 
 .adventures h2 {
@@ -187,7 +332,6 @@ nav li a {
 }
 
 .gallery img {
-  width: 100%;
   border-radius: 8px;
 }
 
@@ -197,32 +341,74 @@ figcaption {
   color: #555;
 }
 
+/* ========== FOOTER ========== */
 footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #d6ced211;
-  color: #111112;
-  position: relative;
+  justify-content: center;
+  align-items: flex-end; /* ✅ Fixed from 'right' */
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: var(--spacing);
+  background-color: #eceff1;
+  color: #111;
+  text-align: center;
 }
 
-
 footer p {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   margin: 0;
-  text-align: center;
 }
 
 .socialmedia {
   display: flex;
   gap: 1rem;
-  margin-left: auto;
 }
 
 .socialmedia img {
   width: 24px;
   height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.1);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .button-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero article {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .trip-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trip-card img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .home-grid,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
